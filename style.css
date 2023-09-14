@@ -188,6 +188,7 @@ header {
     padding-left: 3%;
     padding-right: 3%;
     padding-top: 5%;
+    margin-top: 10px;
 }
 
 .main-2 .explain-text h1 {
@@ -195,12 +196,16 @@ header {
     font-weight: bold; /* Use a higher value for thicker text */
     letter-spacing: 1px; /* Adjust letter spacing if needed */
 }
-.main-2 .explain-text .text-3 {
+.main-2 .explain-text .text-3, .text-4, .text-5 {
     margin-top: 10px;
 }
-.main-2 .explain-text .text-4 {
+.main-2 .explain-text .bullet-list-1 {
+    margin-left: 30px;
+}
+.main-2 .explain-text .text-6, .text-7 {
     margin-top: 30px;
 }
+
 
 /*Desktop - right*//*Desktop - right*//*Desktop - right*/
 /*Desktop - right*//*Desktop - right*//*Desktop - right*/
@@ -216,7 +221,50 @@ header {
     height: auto;
 }
 
-/* mobile layout */
+
+/*PARENT: main-3; children: faq(s)*/
+/*PARENT: main-3; children: faq(s)*/
+/*PARENT: main-3; children: faq(s)*/
+.main-3 {
+    width: 60%; /* Desktop width */
+    margin: 0 auto; /* Center horizontally */
+    padding: 20px;
+}
+.main-3 .faq {
+    background-color: white;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    cursor: pointer;
+    padding: 10px;
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.main-3 .faq.expanded {
+    border-color: purple;
+}
+.main-3 .faq .faq-title {
+    display: flex;
+}
+.main-3 .faq .question {
+    margin: 0;
+    display: inline-block;
+    width: 90%;
+}
+.main-3 .faq .arrow {
+    display: inline-block;
+    width: 10%;
+    text-align: right;
+}
+
+.answer {
+    display: none;
+}
+
+
+
+/* mobile layout *//* mobile layout *//* mobile layout */
+/* mobile layout *//* mobile layout *//* mobile layout */
+/* mobile layout *//* mobile layout *//* mobile layout */
 @media (max-width: 768px) {
 
     /*header*//*header*//*header*/
@@ -257,5 +305,14 @@ header {
         width: 100%;
         flex-direction: column;
     }
+    .main-2 > .graphic-2 {
+        margin: 10%;
+        margin-top: 5%;
+    }
    
+    /*PARENT: main-3; children: faq(s)*/
+    .main-3 {
+        width: 95%; /* Mobile width */
+        margin: 0 2.5%;
+    }
 }

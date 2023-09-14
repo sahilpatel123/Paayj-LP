@@ -19,3 +19,23 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const faqs = document.querySelectorAll(".faq");
+
+    faqs.forEach(function (faq) {
+        faq.addEventListener("click", function () {
+            // Toggle the 'expanded' class on the clicked FAQ
+            faq.classList.toggle("expanded");
+
+            // Toggle the arrow icon
+            const arrow = faq.querySelector(".arrow");
+            arrow.textContent = faq.classList.contains("expanded") ? "▼" : "▶️";
+
+            // Toggle the answer visibility
+            const answer = faq.querySelector(".answer");
+            answer.style.display = faq.classList.contains("expanded") ? "block" : "none";
+        });
+    });
+});
