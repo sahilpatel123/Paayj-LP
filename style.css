@@ -1,0 +1,205 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #F2F7FE;
+}
+
+/*HEADER*//*HEADER*//*HEADER*/
+/*HEADER*//*HEADER*//*HEADER*/
+header {
+    background-color: #fff;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 30px;
+}
+.logo img {
+    max-width: 100px; 
+    margin-left: 30px;
+}
+
+/*desktop header buttons*/
+.desktop-nav { 
+    flex-grow: 1; 
+    margin-left: 100px;
+}
+.desktop-nav ul {
+    list-style: none;
+    display: flex;
+}
+.desktop-nav li {
+    margin-right: 20px;
+}
+.desktop-nav a {
+    text-decoration: none;
+    color: #333;
+}
+
+/*mobile header buttons*/
+.mobile-nav {
+    display: none; /* Hide by default */
+    align-items: center;
+}
+.hamburger {
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #333;
+    z-index: 1; 
+    position: relative; /* Position relative to parent */
+}
+.mobile-links {
+    display: none;
+    flex-direction: column;
+    z-index: 2; 
+    position: absolute; 
+    background-color: #fff;
+    top: 4%; /*below hamburger button*/
+    right: 0;
+    margin-top: 5px;
+    padding: 20px;
+}
+.mobile-links ul {
+    list-style: none;
+}
+.mobile-links li {
+    margin: 10px 0;
+}
+
+
+/*PARENT DIV; children: email-capture, graphic*/
+/*PARENT DIV; children: email-capture, graphic*/
+/*PARENT DIV; children: email-capture, graphic*/
+.email-capture-container {
+    padding-top: 50px;
+    height: 500px;
+    display: flex;
+
+}
+
+/*Desktop - left*//*Desktop - left*//*Desktop - left*/
+/*Desktop - left*//*Desktop - left*//*Desktop - left*/
+/*Desktop - left*//*Desktop - left*//*Desktop - left*/
+.email-capture {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%; 
+    margin-right: 20px; 
+    padding-left: 10%;
+    padding-right: 0;
+}
+
+.email-capture h1, p, form {
+    text-align: left;
+}
+
+.email-capture h1 {
+    font-size: 3.2rem; /* Adjust the size as needed */
+    font-weight: bold; /* Use a higher value for thicker text */
+    letter-spacing: 1px; /* Adjust letter spacing if needed */
+}
+
+.email-capture > .text-1 { /**/
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.email-capture > .text-2 {
+    margin-bottom: 10px;
+}
+
+.email-form {
+   width: 100%;
+   position: relative;
+   height: 60px;
+  }
+  
+.email-form input {
+    background-color: white;
+    border: 2px solid white;
+    border-radius: 50px;
+    padding: 1rem 2rem;
+    width: 100%;
+    height: 100%;
+    padding-left: 10px;
+}
+
+.email-form button {
+    background-color: pink;
+    border: none;
+    border-radius: 50px;
+    height: 80%;
+    padding-left: 5px;
+    padding-right: 5px;
+    position: absolute;
+    right: 0;
+    transform: translateX(-5%);
+    top: 10%;
+  }
+.email-form button:hover {
+    background-color: rgb(238, 169, 203); 
+    transform: translateX(-10%);
+}
+.email-form button:active {
+    transform: translateX(0); 
+}
+
+/*Desktop - right*//*Desktop - right*//*Desktop - right*/
+/*Desktop - right*//*Desktop - right*//*Desktop - right*/
+/*Desktop - right*//*Desktop - right*//*Desktop - right*/
+.graphic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%; 
+}
+.graphic img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+/* mobile layout */
+@media (max-width: 768px) {
+
+    /*header*//*header*//*header*/
+    /*header*//*header*//*header*/
+    /*header*//*header*//*header*/
+    .desktop-nav { /*desktop header buttons*/
+        display: none; 
+    }
+    .mobile-nav { /*mobile header buttons*/
+        display: flex;
+    }
+
+    /*PARENT DIV; children: email-capture, graphic*/
+    /*PARENT DIV; children: email-capture, graphic*/
+    /*PARENT DIV; children: email-capture, graphic*/
+    .email-capture-container {
+        flex-direction: column-reverse; /* Reverse the order on mobile */
+        height: auto;
+        justify-content: center;
+        align-items: center;
+        padding-top: 0px;
+    }
+    .email-capture {
+        width: 100%; 
+        margin-right: 0; 
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    .graphic {
+        width: 50%; /* Takes 50% of the mobile screen */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
