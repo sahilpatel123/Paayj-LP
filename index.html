@@ -40,8 +40,8 @@
             <p class="text-1">From the small stuff to the big costs. Say goodbye to financial stress with housemates, on trips, with your partner, or frankly with anyone.</p>
             <p class="text-2">Paayj is coming soon! 🚀 Sign up to stay in the loop.</p>
             <div class="email-form">
-                <input type="text" placeholder="Enter your email">
-                <button type="submit">Subscribe ➜</button>
+                <input type="text" id="email" placeholder="Enter your email">
+                <button type="submit" onclick="writeToSheet()">Subscribe ➜</button>
             </div>
         </div>
         <div class="graphic">
@@ -117,4 +117,5 @@
         </div>
     </div>
     <script src="main.js"></script>
+    <script async defer src="https://apis.google.com/js/api.js" onload="initApiClient()"></script>
 </body>

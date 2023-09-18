@@ -319,7 +319,6 @@ header {
     font-size: 14px; 
 }
 
-/* Styling for the app buttons */
 .app-buttons {
     margin-top: 10px;
     display: flex;
@@ -335,8 +334,10 @@ header {
 
 /* mobile layout *//* mobile layout *//* mobile layout */
 @media (max-width: 768px) {
-
     /*header*//*header*//*header*/
+    header{
+        padding: 15px;
+    }
     .desktop-nav { /*desktop header buttons*/
         display: none; 
     }
@@ -353,7 +354,7 @@ header {
         padding-top: 0px;
     }
     .main-1 > .graphic {
-        width: 50%; /* Takes 50% of the mobile screen */
+        width: 60%; /* Takes 50% of the mobile screen */
         height: auto; /* Maintain aspect ratio */
     }
     .main-1 > .email-capture {
@@ -361,6 +362,17 @@ header {
         margin-right: 0; 
         padding-left: 10%;
         padding-right: 10%;
+        text-align: center;
+    }
+    .main-1 > .email-capture h1, p, form {
+        text-align: center;
+    }
+    .main-1 > .email-capture h1 {
+        font-size: 2rem;
+    }
+    .text-2 {
+        padding-left: 23%;
+        padding-right: 23%;
     }
 
     /*PARENT: main-2; children: explain-text, graphic-2*/
