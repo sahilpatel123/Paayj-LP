@@ -102,9 +102,9 @@ header {
 }
 
 .main-1 > .email-capture h1 {
-    font-size: 3.2rem; /* Adjust the size as needed */
-    font-weight: bold; /* Use a higher value for thicker text */
-    letter-spacing: 1px; /* Adjust letter spacing if needed */
+    font-size: 3.2rem; 
+    font-weight: bold; 
+    letter-spacing: 1px; 
 }
 
 .main-1 > .email-capture > .text-1 { /**/
@@ -184,7 +184,7 @@ header {
 /*Desktop - left*//*Desktop - left*//*Desktop - left*//*Desktop - left*/
 .main-2 .explain-text {
     flex: 1;
-    text-align: left; /* Left-justify text in the first child */
+    text-align: left; 
     padding-left: 3%;
     padding-right: 3%;
     padding-top: 5%;
@@ -192,10 +192,11 @@ header {
 }
 
 .main-2 .explain-text h1 {
-    font-size: 2rem; /* Adjust the size as needed */
-    font-weight: bold; /* Use a higher value for thicker text */
-    letter-spacing: 1px; /* Adjust letter spacing if needed */
+    font-size: 2rem; 
+    font-weight: bold; 
+    letter-spacing: 1px; 
 }
+
 .main-2 .explain-text .text-3, .text-4, .text-5 {
     margin-top: 10px;
 }
@@ -260,15 +261,81 @@ header {
     display: none;
 }
 
+/*PARENT: closer; children: closer-1, closer-2*/
+/*PARENT: closer; children: closer-1, closer-2*/
+/*PARENT: closer; children: closer-1, closer-2*/
+.closer {
+    background-color: #170134;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 100px;
+    color: white;
+}
+
+.closer-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    padding-left: 5%;
+    gap: 10px;
+}
+
+.closer-1 img {
+    max-width: 100px;
+    margin-right: 20px; 
+}
+
+.desktop-nav-1 { 
+    flex-grow: 1; 
+}
+.desktop-nav-1 ul {
+    list-style: none;
+    display: flex;
+}
+.desktop-nav-1 li {
+    margin-right: 20px;
+}
+.desktop-nav-1 a {
+    text-decoration: none;
+    color: white;
+}
+
+.closer-1 p {
+    color: white;
+    font-size: 12px;
+}
+
+/* Styling for the right child div */
+.closer-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    color: white;
+    padding-right: 5%;
+}
+
+.closer-2 h7 {
+    font-size: 14px; 
+}
+
+/* Styling for the app buttons */
+.app-buttons {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.app-buttons a {
+    display: inline-block;
+    margin-right: 10px; /* Adjust spacing between buttons */
+}
 
 
-/* mobile layout *//* mobile layout *//* mobile layout */
-/* mobile layout *//* mobile layout *//* mobile layout */
 /* mobile layout *//* mobile layout *//* mobile layout */
 @media (max-width: 768px) {
 
-    /*header*//*header*//*header*/
-    /*header*//*header*//*header*/
     /*header*//*header*//*header*/
     .desktop-nav { /*desktop header buttons*/
         display: none; 
@@ -277,8 +344,6 @@ header {
         display: flex;
     }
 
-    /*PARENT DIV: main-1; children: email-capture, graphic*/
-    /*PARENT DIV: main-1; children: email-capture, graphic*/
     /*PARENT DIV: main-1; children: email-capture, graphic*/
     .main-1 {
         flex-direction: column-reverse; /* Reverse the order on mobile */
@@ -299,8 +364,6 @@ header {
     }
 
     /*PARENT: main-2; children: explain-text, graphic-2*/
-    /*PARENT: main-2; children: explain-text, graphic-2*/
-    /*PARENT: main-2; children: explain-text, graphic-2*/
     .main-2 {
         width: 100%;
         flex-direction: column;
@@ -314,5 +377,21 @@ header {
     .main-3 {
         width: 95%; /* Mobile width */
         margin: 0 2.5%;
+    }
+
+    /*PARENT: closer; children: closer-1, closer-2*/
+    .closer {
+        flex-direction: column; /* Display children vertically for mobile */
+        align-items: left; /* Center align children for mobile */
+        padding-top: 40px;
+        padding-bottom: 40px;
+        padding-left: 10%;
+    }
+
+    .closer-1 {
+        padding: 0;
+    }
+    .closer-2 {
+        margin-top: 50px;
     }
 }
