@@ -1,0 +1,22 @@
+{
+  "name": "paayj-lp",
+  "version": "1.0.0",
+  "description": "Paayj landing page",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sahilpatel123/Paayj-LP.git"
+  },
+  "author": "Sahil Patel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sahilpatel123/Paayj-LP/issues"
+  },
+  "homepage": "https://github.com/sahilpatel123/Paayj-LP#readme",
+  "dependencies": {
+    "googleapis": "^126.0.1"
+  }
+}

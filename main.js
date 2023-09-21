@@ -41,13 +41,54 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-const API_KEY = 'AIzaSyDimidnU1vV-yx5-qu4lX7xnvrKDiXWl5E';
-const SPREADHSEET_ID = '1MA9WuJ0tBYJ3KAXKXrP6eWMqGuWcDUhWa4v-tQk-V6Q';
-const CLIENT_ID = '763976178735-ir8kv8fpm8iiulgj1oh3q7k6jq2r24kc.apps.googleusercontent.com';
-const SCOPE = 'https://www.googleapis.com/auth/spreadsheets';
-const DISCOVERY_DOC = 'https://sheets.googleapis.com/$discovery/rest?version=v4';
+
+/*
+function initClient () { //provide the authentication credentials you set up in the Google developer console
+    gapi.load('client', async () => {
+        try {
+          await gapi.client.init({
+            apiKey: API_KEY,
+            clientId: CLIENT_ID,
+            scope: SCOPE,
+            discoveryDocs: [DISCOVERY_DOC],
+          });
+  
+          gapiInited = true;
+        } catch (err) {
+          console.error('Error initializing Google API client:', err);
+        }
+      });
+ }
+
+function onFormSubmit() {
+    const email = document.getElementById('email').value
+    const params = {
+      // The ID of the spreadsheet to update.
+      spreadsheetId: SPREADSHEET_ID, 
+      // The A1 notation of a range to search for a logical table of data.Values will be appended after the last row of the table.
+      range: 'Sheet1', //this is the default spreadsheet name, so unless you've changed it, or are submitting to multiple sheets, you can leave this
+      // How the input data should be interpreted.
+      valueInputOption: 'RAW', //RAW = if no conversion or formatting of submitted data is needed. Otherwise USER_ENTERED
+      // How the input data should be inserted.
+      insertDataOption: 'INSERT_ROWS', //Choose OVERWRITE OR INSERT_ROWS
+    };
+
+    const valueRangeBody = {
+      'majorDimension': 'ROWS', //log each entry as a new row (vs column)
+      'values': [email] 
+    };
+
+    let request = gapi.client.sheets.spreadsheets.values.append(params, valueRangeBody);
+    request.then(function (response) {
+      // TODO: Insert desired response behaviour on submission
+      console.log(response.result);
+    }, function (reason) {
+      console.error('error: ' + reason.result.error.message);
+    });
+  }
 
 
+/*
 function initApiClient() {
     gapi.load('client', async () => {
       try {
@@ -65,13 +106,9 @@ function initApiClient() {
   }
 
   async function writeToSheet() {
-    const email = document.getElementById('email').value;
+    ;
 
-    // Check if the user is authorized
-    if (gapi.client.getToken() === null) {
-      alert('Please authorize first by clicking the "Authorize" button.');
-      return;
-    }
+    
 
     try {
       const response = await gapi.client.sheets.spreadsheets.values.append({
@@ -114,3 +151,4 @@ async function initializeGapiClient() {
     gapiInited = true;
     maybeEnableButtons(); // Call the function here
 }
+*/

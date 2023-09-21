@@ -331,6 +331,9 @@ header {
     margin-right: 10px; /* Adjust spacing between buttons */
 }
 
+.app-buttons img {
+    max-width: 10px;
+}
 
 /* mobile layout *//* mobile layout *//* mobile layout */
 @media (max-width: 768px) {
