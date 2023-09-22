@@ -121,7 +121,7 @@ header {
    position: relative;
    height: 60px;
   }
-  
+/*  
 .main-1 > .email-capture > .email-form input {
     background-color: white;
     border: 2px solid white;
@@ -150,7 +150,7 @@ header {
 }
 .main-1 > .email-capture > .email-form button:active {
     transform: translateX(0); 
-}
+}*/
 
 /*Desktop - right*//*Desktop - right*//*Desktop - right*/
 /*Desktop - right*//*Desktop - right*//*Desktop - right*/
@@ -158,8 +158,9 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 60%; 
+    width: auto;
     max-height: 500px;
+    height: auto
 }
 .main-1 >.graphic img {
     max-width: 100%;
@@ -405,7 +406,15 @@ header {
 
     .closer-1 {
         padding: 0;
+        text-align: left;
     }
+
+    .closer-1 .copy {
+        max-width: 100%;
+        padding: 0;
+        text-align: left;
+    }
+
     .closer-2 {
         margin-top: 50px;
     }
