@@ -158,13 +158,12 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: auto;
-    max-height: 500px;
+    width: 100%;
     height: auto
 }
 .main-1 >.graphic img {
     max-width: 100%;
-    max-height: 100%;
+    height: auto;
 }
 
 
@@ -203,6 +202,7 @@ header {
 }
 .main-2 .explain-text .bullet-list-1 {
     margin-left: 30px;
+    margin-top: 10px;
 }
 .main-2 .explain-text .text-6, .text-7 {
     margin-top: 30px;
@@ -216,11 +216,14 @@ header {
     display: flex;
     justify-content: flex-end; /* Push graphic to the right */
     padding-right: 2%;
+    width: 100%;
+    height: auto;
+    align-items: center;
 }
 
 .main-2 .graphic-2 img {
-    max-width: 100%; /* Ensure the image does not exceed its container */
-    height: auto;
+    max-width: 100%;
+    max-height: 80%;
 }
 
 
@@ -280,6 +283,8 @@ header {
     align-items: left;
     padding-left: 5%;
     gap: 10px;
+    height: 100%;
+
 }
 
 .closer-1 img {
@@ -289,6 +294,7 @@ header {
 
 .desktop-nav-1 { 
     flex-grow: 1; 
+    
 }
 .desktop-nav-1 ul {
     list-style: none;
@@ -333,7 +339,8 @@ header {
 }
 
 .app-buttons img {
-    max-width: 10px;
+    max-width: 100px;
+    max-height: 30px;
 }
 
 /* mobile layout *//* mobile layout *//* mobile layout */
@@ -375,18 +382,28 @@ header {
         font-size: 2rem;
     }
     .text-2 {
-        padding-left: 23%;
-        padding-right: 23%;
+        padding-left: 20%;
+        padding-right: 20%;
     }
 
     /*PARENT: main-2; children: explain-text, graphic-2*/
     .main-2 {
         width: 100%;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
     }
     .main-2 > .graphic-2 {
         margin: 10%;
         margin-top: 5%;
+        max-height: 50%;
+        max-width: 50%;
+
+    }
+
+    .text-3, .text-4, .text-5 {
+        text-align: left;
     }
    
     /*PARENT: main-3; children: faq(s)*/
@@ -395,6 +412,10 @@ header {
         margin: 0 2.5%;
     }
 
+    .faq > .answer {
+        text-align: left;
+    }
+    
     /*PARENT: closer; children: closer-1, closer-2*/
     .closer {
         flex-direction: column; /* Display children vertically for mobile */
